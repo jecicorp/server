@@ -819,7 +819,7 @@ class ManagerTest extends \Test\TestCase {
 				['core', 'shareapi_enforce_internal_expire_date', 'no', 'yes'],
 				['core', 'shareapi_internal_expire_after_n_days', '7', '3'],
 				['core', 'shareapi_default_internal_expire_date', 'no', 'yes'],
-				['core', 'internal_defaultExpDays', 3, '3'],
+				['core', 'internal_defaultExpDays', '3', '3'],
 			]);
 
 		$expected = new \DateTime();
@@ -840,7 +840,7 @@ class ManagerTest extends \Test\TestCase {
 				['core', 'shareapi_enforce_internal_expire_date', 'no', 'yes'],
 				['core', 'shareapi_internal_expire_after_n_days', '7', '3'],
 				['core', 'shareapi_default_internal_expire_date', 'no', 'yes'],
-				['core', 'internal_defaultExpDays', 3, '1'],
+				['core', 'internal_defaultExpDays', '3', '1'],
 			]);
 
 		$expected = new \DateTime();
@@ -950,7 +950,7 @@ class ManagerTest extends \Test\TestCase {
 			->willReturnMap([
 				['core', 'shareapi_default_internal_expire_date', 'no', 'yes'],
 				['core', 'shareapi_internal_expire_after_n_days', '7', '3'],
-				['core', 'internal_defaultExpDays', 3, '3'],
+				['core', 'internal_defaultExpDays', '3', '3'],
 			]);
 
 		$hookListener = $this->getMockBuilder('Dummy')->setMethods(['listener'])->getMock();
@@ -979,7 +979,7 @@ class ManagerTest extends \Test\TestCase {
 			->willReturnMap([
 				['core', 'shareapi_default_internal_expire_date', 'no', 'yes'],
 				['core', 'shareapi_internal_expire_after_n_days', '7', '3'],
-				['core', 'internal_defaultExpDays', 3, '1'],
+				['core', 'internal_defaultExpDays', '3', '1'],
 			]);
 
 		$hookListener = $this->getMockBuilder('Dummy')->setMethods(['listener'])->getMock();
