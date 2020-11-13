@@ -408,7 +408,7 @@ class Manager implements IManager {
 			$expirationDate = new \DateTime();
 			$expirationDate->setTime(0,0,0);
 
-			$days = (int)$this->config->getAppValue('core', 'internal_defaultExpDays', $this->shareApiInternalDefaultExpireDays());
+			$days = (int)$this->config->getAppValue('core', 'internal_defaultExpDays', (string)$this->shareApiInternalDefaultExpireDays());
 			if ($days > $this->shareApiInternalDefaultExpireDays()) {
 				$days = $this->shareApiInternalDefaultExpireDays();
 			}
