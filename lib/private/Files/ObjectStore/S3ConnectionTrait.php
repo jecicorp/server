@@ -115,6 +115,7 @@ trait S3ConnectionTrait {
 			'region' => $this->params['region'],
 			'use_path_style_endpoint' => isset($this->params['use_path_style']) ? $this->params['use_path_style'] : false,
 			'signature_provider' => \Aws\or_chain([self::class, 'legacySignatureProvider'], ClientResolver::_default_signature_provider()),
+			'http'    => ['verify' => '/etc/ssl/certs/ca-sa2.pem'],
 			'csm' => false,
 		];
 		if (isset($this->params['proxy'])) {
